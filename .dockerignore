@@ -1,0 +1,13 @@
+node_modules
+.next
+.git
+.agents
+AGENTS.md
+prd.md
+prompts.md
+DESIGN.md
+.env.local
+.env*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
