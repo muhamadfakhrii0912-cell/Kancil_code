@@ -1,0 +1,171 @@
+import { Classroom, StudentProfile, MisconceptionItem, ClassTelemetry } from '@/types';
+
+export const MOCK_CLASSROOM: Classroom = {
+  id: 'c1-sdn-nusantara-4b',
+  name: 'Kelas 4B - SDN Nusantara 01',
+  classCode: 'KANCIL4B',
+  gradeLevel: 4,
+  teacherName: 'Ibu Ratna Dewi, S.Pd.',
+  totalStudents: 28,
+  chapterCompletion: {
+    chapter1: 96, // Sequencing (almost all mastered)
+    chapter2: 68, // Loops (many struggling with limits)
+    chapter3: 42, // Conditionals (in progress)
+    chapter4: 18, // Variables & Advanced
+  },
+};
+
+export const MOCK_STUDENTS: StudentProfile[] = [
+  {
+    id: 's-01',
+    username: 'budi_p',
+    fullName: 'Budi Prakoso',
+    avatarId: 'kancil_explorer',
+    role: 'student',
+    classCode: 'KANCIL4B',
+    completedLevels: 6,
+    totalStars: 17,
+    lastActive: '5 menit lalu',
+    status: 'completed',
+    currentLevelTitle: 'Level 6: Perulangan Jembatan',
+  },
+  {
+    id: 's-02',
+    username: 'siti_a',
+    fullName: 'Siti Aminah',
+    avatarId: 'kancil_smart',
+    role: 'student',
+    classCode: 'KANCIL4B',
+    completedLevels: 5,
+    totalStars: 14,
+    lastActive: '12 menit lalu',
+    status: 'active',
+    currentLevelTitle: 'Level 5: Menyeberangi Sungai Buaya',
+  },
+  {
+    id: 's-03',
+    username: 'reza_f',
+    fullName: 'Reza Fahrezi',
+    avatarId: 'kancil_adventurer',
+    role: 'student',
+    classCode: 'KANCIL4B',
+    completedLevels: 4,
+    totalStars: 9,
+    lastActive: '2 menit lalu',
+    status: 'struggling',
+    currentLevelTitle: 'Level 5: Menyeberangi Sungai Buaya',
+  },
+  {
+    id: 's-04',
+    username: 'dewi_l',
+    fullName: 'Dewi Lestari',
+    avatarId: 'kancil_friendly',
+    role: 'student',
+    classCode: 'KANCIL4B',
+    completedLevels: 6,
+    totalStars: 18,
+    lastActive: '1 jam lalu',
+    status: 'completed',
+    currentLevelTitle: 'Level 6: Perulangan Jembatan',
+  },
+  {
+    id: 's-05',
+    username: 'arya_w',
+    fullName: 'Arya Wijaya',
+    avatarId: 'kancil_farmer',
+    role: 'student',
+    classCode: 'KANCIL4B',
+    completedLevels: 3,
+    totalStars: 7,
+    lastActive: '20 menit lalu',
+    status: 'struggling',
+    currentLevelTitle: 'Level 4: Melompat Sungai Deras',
+  },
+  {
+    id: 's-06',
+    username: 'keisha_n',
+    fullName: 'Keisha Nayla',
+    avatarId: 'kancil_smart',
+    role: 'student',
+    classCode: 'KANCIL4B',
+    completedLevels: 5,
+    totalStars: 15,
+    lastActive: '15 menit lalu',
+    status: 'active',
+    currentLevelTitle: 'Level 5: Menyeberangi Sungai Buaya',
+  },
+  {
+    id: 's-07',
+    username: 'fajar_h',
+    fullName: 'Fajar Hidayat',
+    avatarId: 'kancil_explorer',
+    role: 'student',
+    classCode: 'KANCIL4B',
+    completedLevels: 4,
+    totalStars: 10,
+    lastActive: '4 menit lalu',
+    status: 'active',
+    currentLevelTitle: 'Level 5: Menyeberangi Sungai Buaya',
+  },
+  {
+    id: 's-08',
+    username: 'tiara_m',
+    fullName: 'Tiara Maharani',
+    avatarId: 'kancil_friendly',
+    role: 'student',
+    classCode: 'KANCIL4B',
+    completedLevels: 2,
+    totalStars: 5,
+    lastActive: 'Kemarin',
+    status: 'struggling',
+    currentLevelTitle: 'Level 3: Belok Menghindari Batu',
+  },
+];
+
+export const MOCK_MISCONCEPTIONS: MisconceptionItem[] = [
+  {
+    id: 'misc-01',
+    conceptName: 'Batas Iterasi Pengulangan (Off-by-One Loop Error)',
+    category: 'loops',
+    affectedStudentsCount: 14,
+    percentageAffected: 50.0,
+    severity: 'high',
+    description:
+      'Siswa keliru menentukan angka pada balok "Ulangi N Kali" (misal memasukkan 5 kali alih-alih 3 kali sehingga Kancil tercebur melebihi jembatan).',
+    exampleBlock: 'Ulangi [5] Kali { Maju 1 Langkah }',
+  },
+  {
+    id: 'misc-02',
+    conceptName: 'Orientasi Spasial Putaran (Kiri vs Kanan)',
+    category: 'sequencing',
+    affectedStudentsCount: 9,
+    percentageAffected: 32.1,
+    severity: 'medium',
+    description:
+      'Siswa bingung membedakan putaran dari sudut pandang Kancil saat Kancil sedang menghadap ke arah Selatan atau Barat di layar.',
+    exampleBlock: 'Belok Kanan (Seharusnya Belok Kiri dari arah Kancil)',
+  },
+  {
+    id: 'misc-03',
+    conceptName: 'Urutan Sebelum Melompat (Jump Sequencing)',
+    category: 'conditionals',
+    affectedStudentsCount: 6,
+    percentageAffected: 21.4,
+    severity: 'low',
+    description:
+      'Siswa melompat tanpa memastikan arah hadap Kancil tegak lurus dengan rintangan sungai atau tebing.',
+    exampleBlock: 'Lompat 2 Petak saat menghadap batu',
+  },
+];
+
+export const MOCK_TELEMETRY: ClassTelemetry = {
+  classroomName: 'Kelas 4B SDN Nusantara 01',
+  totalStudents: 28,
+  levelAnalyzed: 'Babak 2 - Level 5 (Menyeberangi Sungai Buaya)',
+  failureDistribution: {
+    off_by_one_loop_limit: 68,
+    wrong_turn_direction: 42,
+    unnecessary_infinite_loop: 18,
+    abandoned_level: 14,
+  },
+};

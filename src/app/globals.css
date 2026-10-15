@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-rimba-primary: #14382C;
+    --color-rimba-light: #205744;
+    --color-tanah-terracotta: #C25E34;
+    --color-tanah-dark: #964320;
+    --color-sungai-teal: #267D73;
+    --color-surya-amber: #EAA22E;
+    --color-surya-dark: #C48016;
+    --color-bg-papirus: #FAF7EE;
+    --color-surface-board: #F0EADA;
+    --color-border-board: #DCD2BE;
+  }
+
+  body {
+    background-color: var(--color-bg-papirus);
+    color: #14382C;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Fredoka', system-ui, -apple-system, sans-serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* 3D Tactile Buttons (Kid-Friendly Press Down Effects) */
+.btn-tactile-terracotta {
+  background-color: #C25E34;
+  color: #FFFFFF;
+  box-shadow: 0 4px 0 #8F3E1E;
+  transition: all 0.1s ease;
+}
+
+.btn-tactile-terracotta:hover {
+  background-color: #D3673B;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #8F3E1E;
+}
+
+.btn-tactile-terracotta:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #8F3E1E;
+}
+
+.btn-tactile-rimba {
+  background-color: #14382C;
+  color: #FFFFFF;
+  box-shadow: 0 4px 0 #0B221A;
+  transition: all 0.1s ease;
+}
+
+.btn-tactile-rimba:hover {
+  background-color: #1B4D3E;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #0B221A;
+}
+
+.btn-tactile-rimba:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #0B221A;
+}
+
+.btn-tactile-surya {
+  background-color: #EAA22E;
+  color: #382005;
+  box-shadow: 0 4px 0 #B07416;
+  transition: all 0.1s ease;
+}
+
+.btn-tactile-surya:hover {
+  background-color: #F3AF3D;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #B07416;
+}
+
+.btn-tactile-surya:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #B07416;
+}
+
+.btn-tactile-sungai {
+  background-color: #267D73;
+  color: #FFFFFF;
+  box-shadow: 0 4px 0 #18524B;
+  transition: all 0.1s ease;
+}
+
+.btn-tactile-sungai:hover {
+  background-color: #2D9186;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #18524B;
+}
+
+.btn-tactile-sungai:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #18524B;
+}
+
+.btn-tactile-neutral {
+  background-color: #FFFFFF;
+  color: #14382C;
+  border: 2px solid #DCD2BE;
+  box-shadow: 0 3px 0 #DCD2BE;
+  transition: all 0.1s ease;
+}
+
+.btn-tactile-neutral:hover {
+  background-color: #F8F4EC;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 #C9BDA5;
+}
+
+.btn-tactile-neutral:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #DCD2BE;
+}
+
+/* Tactile Parchment Card */
+.card-parchment {
+  background-color: #FFFFFF;
+  border: 2px solid #E5DDCB;
+  box-shadow: 0 4px 0 #E5DDCB;
+  border-radius: 20px;
+}
+
+/* Blockly Resets */
+.blocklySvg {
+  background-color: #FBF9F4 !important;
+  border-radius: 16px;
+}
+
+.blocklyToolboxDiv {
+  background-color: #F4EFE3 !important;
+  border-right: 2px solid #DCD2BE !important;
+  padding: 10px 6px !important;
+}
+
+.blocklyTreeLabel {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  color: #14382C !important;
+}
+
+/* Nusantara Glowing Block Execution Aura */
+@keyframes kancil-aura-pulse {
+  0% {
+    filter: drop-shadow(0 0 6px rgba(234, 162, 46, 0.9)) drop-shadow(0 0 14px rgba(194, 94, 52, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(254, 215, 64, 1)) drop-shadow(0 0 26px rgba(234, 162, 46, 0.9));
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgba(234, 162, 46, 0.9)) drop-shadow(0 0 14px rgba(194, 94, 52, 0.6));
+  }
+}
+
+.blocklyHighlighted > .blocklyPath {
+  stroke: #FFD54F !important;
+  stroke-width: 4.5px !important;
+  animation: kancil-aura-pulse 0.8s infinite ease-in-out !important;
+}
+
+.blocklyHighlighted {
+  filter: drop-shadow(0 0 8px rgba(234, 162, 46, 0.7));
+}
+
